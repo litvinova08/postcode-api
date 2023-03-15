@@ -10,4 +10,5 @@ Some form of persistence (a database)
 Testing for controller / service layers
 
 ## Dependencies used
+- JPA Queries https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods
 - Lombok
