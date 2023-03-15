@@ -12,30 +12,29 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import litvinova08.employeecreator.employee.Employee;
-
 @RestController
 @RequestMapping("/")
 public class SuburbController {
 
 	@Autowired
-	SuburbService service;  
-	
-	//get all suburbs
+	SuburbService service;
+
+	// get all suburbs
 	@GetMapping("/postcodes")
 	public ResponseEntity<List<Suburb>> getAll() {
 		List<Suburb> allSuburbs = this.service.getAll();
 		return ResponseEntity.ok(allSuburbs);
 	}
 
-	@PostMapping("/{postcode}")
+	//get a record by a postcode
+	@GetMapping("/postcodes/{postcode}")
 	public ResponseEntity<Suburb> getByPostcode(@PathVariable String postcode) {
 		Optional<Suburb> maybeSuburb = this.service.findByPostcode(postcode);
-		
 		if (maybeSuburb.isEmpty()) {
 			return new ResponseEntity<>(null, HttpStatus.FOUND);
 		} else {
 			return ResponseEntity.ok(maybeSuburb.get());
-		
+
+		}
 	}
 }
