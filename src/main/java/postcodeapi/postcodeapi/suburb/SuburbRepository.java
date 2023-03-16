@@ -9,4 +9,7 @@ import org.springframework.stereotype.Repository;
 public interface SuburbRepository extends JpaRepository<Suburb, Long> {
 
 	Optional<Suburb> findByPostcode(String postcode);
+	
+	Optional<Suburb> findBySuburb(String suburb);
+	
 }

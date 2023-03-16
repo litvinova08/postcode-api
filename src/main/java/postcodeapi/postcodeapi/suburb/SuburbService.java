@@ -24,4 +24,7 @@ public class SuburbService {
 		return this.repository.findByPostcode(postcode);
 	}
 	
+//	public Optional<Suburb> findBySuburb(String suburb) {
+//		return this.repository.findBySuburb(suburb);
+//	}
 }
