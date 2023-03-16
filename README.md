@@ -12,3 +12,5 @@ Testing for controller / service layers
 ## Dependencies used
 - JPA Queries https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods
 - Lombok
+
+Data imported from https://github.com/Elkfox/Australian-Postcode-Data/blob/master/au_postcodes.csv
