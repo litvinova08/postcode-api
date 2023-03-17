@@ -56,8 +56,6 @@ Run the app
   - http://localhost:8080/postcodes/suburb={suburb} to get a record by a suburb name
   
   ![image](https://user-images.githubusercontent.com/37922356/225819145-a9ecc984-64be-41fc-9678-6fa7ba7853ed.png)
-
-
 ## Dependencies used
 - JPA Queries https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods
 
