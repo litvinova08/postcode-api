@@ -24,11 +24,14 @@ Set up a database using MySQL Workbench. Please, make sure that YOUR_MYSQL_DB_NA
 
 `CREATE DATABASE <YOUR_MYSQL_DB_NAME>`
 
+
 Use the database:
 
 `USE <YOUR_MYSQL_DB_NAME>`
 
+
 Create a table schema:
+
 `CREATE TABLE suburb (
     postcode varchar(255),
     suburb varchar(255),
@@ -43,6 +46,7 @@ Download suburb data:
 copy data from https://github.com/Elkfox/Australian-Postcode-Data/blob/master/au_postcodes.csv into a txt file FILE_NAME.txt
 
 `LOAD DATA LOCAL INFILE '/path/FILE_NAME.txt' INTO TABLE suburb FIELDS TERMINATED BY ',';`
+
 
 Run the app
 - You can Run the app by pressing the green play button
