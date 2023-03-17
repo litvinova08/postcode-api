@@ -27,9 +27,9 @@ public class SuburbController {
 	}
 
 	//get a record by a postcode
-//	@GetMapping("/postcodes/postcode={postcode}")
+	@GetMapping("/postcodes/postcode={postcode}")
 	
-	@GetMapping("/postcodes/{postcode}")
+//	@GetMapping("/postcodes/{postcode}")
 	public ResponseEntity<Suburb> getByPostcode(@PathVariable String postcode) {
 		Optional<Suburb> maybeSuburb = this.service.findByPostcode(postcode);
 		if (maybeSuburb.isEmpty()) {
@@ -40,16 +40,16 @@ public class SuburbController {
 		}
 	}
 	
-//	//get a record by a suburb
-//	@GetMapping("/postcodes/suburb={suburb}/")
-//	public ResponseEntity<Suburb> getBySuburb(@PathVariable String suburb) {
-//		Optional<Suburb> maybeSuburb = this.service.findBySuburb(suburb);
-//		if (maybeSuburb.isEmpty()) {
-//			return new ResponseEntity<>(null, HttpStatus.FOUND);
-//		} else {
-//			return ResponseEntity.ok(maybeSuburb.get());
-//
-//		}
-//	}
+	//get a record by a suburb
+	@GetMapping("/postcodes/suburb={suburb}")
+	public ResponseEntity<Suburb> getBySuburb(@PathVariable String suburb) {
+		Optional<Suburb> maybeSuburb = this.service.findBySuburb(suburb);
+		if (maybeSuburb.isEmpty()) {
+			return new ResponseEntity<>(null, HttpStatus.FOUND);
+		} else {
+			return ResponseEntity.ok(maybeSuburb.get());
+
+		}
+	}
 	
 }
